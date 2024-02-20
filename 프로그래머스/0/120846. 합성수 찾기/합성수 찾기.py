@@ -9,3 +9,5 @@ def solution(n):
             cnt = cnt + 1 if i % j == 0 else cnt
     
     return answer
+
+# j의 제곱근까지만 확인하면 더 빠르게 가능
