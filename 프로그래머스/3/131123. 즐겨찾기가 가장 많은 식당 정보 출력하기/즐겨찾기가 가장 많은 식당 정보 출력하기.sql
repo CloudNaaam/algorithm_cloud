@@ -1,0 +1,5 @@
+select FOOD_TYPE,REST_ID,REST_NAME,FAVORITES
+from REST_INFO as R
+where FAVORITES=(select max(FAVORITES) from REST_INFO where R.FOOD_TYPE = FOOD_TYPE)
+group by FOOD_TYPE
+order by FOOD_TYPE desc;
